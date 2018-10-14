@@ -51,6 +51,17 @@ let UsersController = {
 			}
 			return error(res, err);
 		});
+  },
+  updateUser: (req, res) => {
+    return UsersDataProvider.updateUser(req.params.userId,req.body).then((output)=>{
+			return success(res, output)
+		}).catch(err=>{
+			console.log("Error occurred while updating user: ",req.params.userId, err);
+			if(err && err.code){
+				return error(res, err, err.code, err.message);
+			}
+			return error(res, err);
+		});
   }
 
 };
