@@ -3,7 +3,7 @@ let { success, error } = require('../../../utils/ResponseWrapperUtils');
 
 let UsersController = {
   createUser: (req, res) => {
-    if(req.body.firstName == null || req.body.lastName == null || req.body.emailID == null){
+    if(req.body.first_name == null || req.body.last_name == null || req.body.email_id == null){
       return error(res,'Mandatory fields missing.', 400, 'Mandatory fields missing.');
     }
 	  return UsersDataProvider.createUser(req.body).then((output)=>{
