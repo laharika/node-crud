@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "node-crud",
+		"_postman_id": "bb3104ca-ed8f-b48f-ca15-3994eaa44644",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/api/users",
+			"request": {
+				"url": "http://localhost:8081/api/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\" : \"Laharika\",\n\t\"last_name\" : \"Smrti\",\n\t\"email_id\" : \"lh@effy.co.in\",\n\t\"designation\" : \"test\",\n\t\"dob\" : \"2018/10/10\",\n\t\"active\" : true\n}"
+				},
+				"description": "create new user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/users/3",
+			"request": {
+				"url": "http://localhost:8081/api/users/3",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\": \"new\",\n\t\"designation\" : \"QA\",\n\t\"active\" : false\n\n}"
+				},
+				"description": "Update user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/users",
+			"request": {
+				"url": "http://localhost:8081/api/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"firstname\",\n\t\"lastName\" : \"lastname\",\n\t\"emailID\" : \"emailid@effy.co.in\",\n\t\"designation\" : \"des\",\n\t\"dob\" : \"2018/10/11\",\n\t\"active\" : false\n}"
+				},
+				"description": "list users"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/users/3",
+			"request": {
+				"url": "http://localhost:8081/api/users/5",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"firstname\",\n\t\"lastName\" : \"lastname\",\n\t\"emailID\" : \"emailid@effy.co.in\",\n\t\"designation\" : \"des\",\n\t\"dob\" : \"2018/10/11\",\n\t\"active\" : false\n}"
+				},
+				"description": "View user by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/users/10",
+			"request": {
+				"url": "http://localhost:8081/api/users/10",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"firstname\",\n\t\"lastName\" : \"lastname\",\n\t\"emailID\" : \"emailid@effy.co.in\",\n\t\"designation\" : \"des\",\n\t\"dob\" : \"2018/10/11\",\n\t\"active\" : false\n}"
+				},
+				"description": "delete user"
+			},
+			"response": []
+		}
+	]
+}
